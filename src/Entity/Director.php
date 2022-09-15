@@ -20,12 +20,9 @@ class Director
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $firstName;
+    private $name;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $lastName;
+   
 
     /**
      * @ORM\ManyToOne(targetEntity=Movie::class, inversedBy="director")
@@ -37,29 +34,19 @@ class Director
         return $this->id;
     }
 
-    public function getFirstName(): ?string
+    public function getName(): ?string
     {
-        return $this->firstName;
+        return $this->name;
     }
 
-    public function setFirstName(string $firstName): self
+    public function setName(string $name): self
     {
-        $this->firstName = $firstName;
+        $this->name = $name;
 
         return $this;
     }
 
-    public function getLastName(): ?string
-    {
-        return $this->lastName;
-    }
-
-    public function setLastName(string $lastName): self
-    {
-        $this->lastName = $lastName;
-
-        return $this;
-    }
+    
 
     public function getMovie(): ?Movie
     {

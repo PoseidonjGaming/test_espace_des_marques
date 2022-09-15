@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Information série{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em ;  font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    
+</style>
+
+<div class="example-wrapper">
+    <div class="row">
+       
+        <div class="col-md-6">
+          
+            <p>Titre: {{movie.title}}</p>
+            <p>Année de production: {{movie.year}}</p>
+            <p>Résumé: {{movie.description}}</p>
+            <p>Réalisateur: {{movie.director[0].name}}</p>
+            <p>{% for genre in movie.genreList %}
+                    
+                    {{genre.name}}
+                {% endfor %}</p>
+            
+           
+        </div>
+</div>
+{% endblock %}
