@@ -9,6 +9,7 @@ class apiXML
 		return simplexml_load_file($file);
 	}
 
+	//Renvoie un objet Movie et créer les objests Director et Genre
 	public function import(){ 
 		$repMovie=$this->getDoctrine()->getRepository(Movie::class);
         $repGenre=$this->getDoctrine()->getRepository(Genre::class);

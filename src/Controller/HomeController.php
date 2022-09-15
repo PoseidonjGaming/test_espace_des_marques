@@ -41,9 +41,7 @@ class HomeController extends AbstractController
         }
 
         //return $this->redirectToRoute('home');
-        return $this->render('home/test.html.twig', [
-            
-        ]);
+        return $this->redirectToRoute('home');
     }
      /**
      * @Route("/detail_movie/{id}", name="detail_movie")
