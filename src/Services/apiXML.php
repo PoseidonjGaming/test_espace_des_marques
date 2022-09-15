@@ -5,6 +5,7 @@ namespace App\Services;
 
 class apiXML
 {
+	//Lie le fichier XML
 	public function xmlToList($file){
 		return simplexml_load_file($file);
 	}
